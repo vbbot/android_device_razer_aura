@@ -7,7 +7,7 @@
 
     <string name="category_display">显示</string>
     <string name="pref_resolution">分辨率(需要重新切换手势)</string>
-    <string name="pref_refresh_rate">刷新率(还不行)</string>
+    <string name="pref_refresh_rate">刷新率</string>
 
     <string name="category_chroma">Chroma MCU</string>
     <string name="pref_chroma">Chroma</string>

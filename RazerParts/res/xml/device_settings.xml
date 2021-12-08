@@ -27,7 +27,6 @@
             android:title="@string/pref_resolution" />
 
         <ListPreference
-            android:enabled="false"
             android:defaultValue="120"
             android:icon="@drawable/cellphone_screenshot"
             android:key="screen_refresh_rate"

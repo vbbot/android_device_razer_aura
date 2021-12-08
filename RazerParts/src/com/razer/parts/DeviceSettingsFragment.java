@@ -75,17 +75,6 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
                 break;
             case SCREEN_REFRESH_RATE:
                 int parseInt = Integer.parseInt((String) o);
-                Log.e(TAG, "To set rate: "+parseInt);
-                // IWindowManager windowManagerService = WindowManagerGlobal.getWindowManagerService();
-                // if (windowManagerService == null) {
-                //     Log.e(TAG, "fps interface failure");
-                //     return false;
-                // }
-                // try {
-                //     windowManagerService.setDisplayRefreshRate(0, parseInt);
-                // } catch(RemoteException e) {
-                //     Log.e(TAG, "Error settings refresh rate", e);
-                // }
                 Settings.System.putInt(getContext().getContentResolver(), MIN_REFRESH_RATE, parseInt);
 	            Settings.System.putInt(getContext().getContentResolver(), PEAK_REFRESH_RATE, parseInt);
                 break;
