@@ -32,7 +32,7 @@
                 android:name=".DeviceSettingsActivity"
                 android:label="@string/device_settings_title"
                 android:icon="@drawable/cellphone_cog"
-                android:exported="false"
+                android:exported="true"
                 android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
