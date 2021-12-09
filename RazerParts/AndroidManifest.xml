@@ -36,13 +36,12 @@
                 android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.dismiss"
                        android:value="9,13,30" />
-            <meta-data android:name="com.android.settings.bg.hint"
-                       android:resource="@color/device_settings_hp_bg" />
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.homepage" />
             <meta-data android:name="com.android.settings.summary"
@@ -53,7 +52,8 @@
             android:name=".ChromaActivity"
             android:label="@string/pref_chroma" />
 
-        <receiver android:name="com.razer.parts.BootReceiver">
+        <receiver android:name="com.razer.parts.BootReceiver"
+            android:exported="true">
             <intent-filter android:priority="999">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
