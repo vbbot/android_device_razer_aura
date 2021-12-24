@@ -1,0 +1,21 @@
+type razerparts_app, domain;
+typeattribute razerparts_app mlstrustedsubject;
+
+app_domain(razerparts_app)
+
+# Access sysfs_led control(Chroma)
+allow razerparts_app sysfs_leds:dir search;
+allow razerparts_app sysfs_leds:file { getattr open read write };
+
+allow razerparts_app zygote:unix_stream_socket getopt;
+allow razerparts_app system_app_data_file:dir { add_name create getattr write };
+allow razerparts_app activity_service:service_manager find;
+allow razerparts_app activity_task_service:service_manager find;
+allow razerparts_app audio_service:service_manager find;
+allow razerparts_app autofill_service:service_manager find;
+allow razerparts_app content_capture_service:service_manager find;
+allow razerparts_app gpu_service:service_manager find;
+allow razerparts_app hint_service:service_manager find;
+allow razerparts_app surfaceflinger_service:service_manager find;
+allow razerparts_app system_app_data_file:dir remove_name;
+allow razerparts_app system_app_data_file:file { create open rename setattr unlink };
