@@ -104,7 +104,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     }
 
     private void findPreferences() {
-        mResolutionPref = findPreference(SCREEN_RESOLUTION);
+        // mResolutionPref = findPreference(SCREEN_RESOLUTION);
         mRefreshRatePref = findPreference(SCREEN_REFRESH_RATE);
         mChromaPref = findPreference(CHROMA);
         mDolbyAtmosPref = findPreference(DOLBY_ATMOS);
@@ -112,7 +112,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     }
 
     private void bindListeners() {
-        mResolutionPref.setOnPreferenceChangeListener(this);
+        // mResolutionPref.setOnPreferenceChangeListener(this);
         mRefreshRatePref.setOnPreferenceChangeListener(this);
         mChromaPref.setOnPreferenceClickListener(this);
         mDolbyAtmosPref.setOnPreferenceClickListener(this);
@@ -120,7 +120,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     }
 
     private void updateSummary() {
-        updateResolutionSummary();
+        // updateResolutionSummary();
         updateRefreshRateSummary();
     }
 
