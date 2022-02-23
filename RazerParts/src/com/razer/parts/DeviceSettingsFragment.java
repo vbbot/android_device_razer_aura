@@ -142,6 +142,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
         String refreshRate = Settings.System.getInt(getContext().getContentResolver(), PEAK_REFRESH_RATE, 120) + "";
         String[] entryvalue = getContext().getResources().getStringArray(R.array.refresh_rate_values);
         String[] entry = getContext().getResources().getStringArray(R.array.refresh_rate_entries);
+        mRefreshRatePref.setValue(refreshRate);
         for (int i = 0; i < entryvalue.length; i++) {
             if (entryvalue[i].equals(refreshRate)) {
                 mRefreshRatePref.setSummary(entry[i]);
