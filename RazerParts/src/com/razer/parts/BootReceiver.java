@@ -22,6 +22,8 @@ import android.os.RemoteException;
 import android.provider.Settings;
 import android.view.IWindowManager;
 import android.view.WindowManagerGlobal;
+import static android.provider.Settings.System.MIN_REFRESH_RATE;
+import static android.provider.Settings.System.PEAK_REFRESH_RATE;
 
 import static com.razer.parts.Constants.*;
 import com.razer.parts.ShellUtils;
@@ -58,18 +60,9 @@ public class BootReceiver extends BroadcastReceiver {
             ShellUtils.execCommand("wm size 1080x1920", false);
         }
 
-        /* Buggy [WIP]*/
-        // String refreshRate = (String) spfu.get(context, SCREEN_REFRESH_RATE,
-        //         "120");
-        // int parseInt = Integer.parseInt(refreshRate);
-        // IWindowManager windowManagerService = WindowManagerGlobal.getWindowManagerService();
-        // if (windowManagerService != null) {
-        //     try {
-        //         windowManagerService.setDisplayRefreshRate(0, parseInt);
-        //     } catch(RemoteException e) {
-        //         e.printStackTrace();
-        //     }
-        // }
+        int refreshRate = Settings.System.getInt(context.getContentResolver(), PEAK_REFRESH_RATE, 120);
+        Settings.System.putInt(context.getContentResolver(), MIN_REFRESH_RATE, refreshRate);
+	    Settings.System.putInt(context.getContentResolver(), PEAK_REFRESH_RATE, refreshRate);
 
         if(chromaEnabled) {
             ChromaManager tempManager = new ChromaManager();
