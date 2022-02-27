@@ -47,18 +47,19 @@ public class BootReceiver extends BroadcastReceiver {
                 "#00FF00");
         String brightness = (String) spfu.get(context, CHROMA_BRIGHTNESS,
                 "200");
-        String resolution = (String) spfu.get(context, SCREEN_RESOLUTION,
-                "1440");
         boolean chromaEnabled = (boolean) spfu.get(context, CHROMA_SWITCH,
                 false);
 
-        if(resolution.equals("1440")) {
-            ShellUtils.execCommand("wm density 480", false);
-            ShellUtils.execCommand("wm size 1440x2560", false);
-        } else {
-            ShellUtils.execCommand("wm density 360", false);
-            ShellUtils.execCommand("wm size 1080x1920", false);
-        }
+        /* Buggy */
+        // String resolution = (String) spfu.get(context, SCREEN_RESOLUTION,
+        //         "1440");
+        // if(resolution.equals("1440")) {
+        //     ShellUtils.execCommand("wm density 480", false);
+        //     ShellUtils.execCommand("wm size 1440x2560", false);
+        // } else {
+        //     ShellUtils.execCommand("wm density 360", false);
+        //     ShellUtils.execCommand("wm size 1080x1920", false);
+        // }
 
         int refreshRate = Settings.System.getInt(context.getContentResolver(), PEAK_REFRESH_RATE, 120);
         Settings.System.putInt(context.getContentResolver(), MIN_REFRESH_RATE, refreshRate);
