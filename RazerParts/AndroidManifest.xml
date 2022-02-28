@@ -35,13 +35,17 @@
                 android:exported="true"
                 android:launchMode="singleTask">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
             <meta-data android:name="com.android.settings.dismiss"
                        android:value="9,13,30" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/cellphone_cog"/>
+            <meta-data
+                android:name="com.android.settings.icon_tintable"
+                android:value="true" />
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.homepage" />
             <meta-data android:name="com.android.settings.summary"
