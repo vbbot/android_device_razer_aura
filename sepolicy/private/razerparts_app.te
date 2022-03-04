@@ -17,6 +17,8 @@ allow razerparts_app gpu_service:service_manager find;
 allow razerparts_app hint_service:service_manager find;
 allow razerparts_app surfaceflinger_service:service_manager find;
 allow razerparts_app game_service:service_manager find;
+allow razerparts_app textservices_service:service_manager find;
 
-allow razerparts_app system_app_data_file:dir { create rw_dir_perms };
-allow razerparts_app system_app_data_file:file { create rw_file_perms };
+allow razerparts_app system_app_data_file:dir { create rw_dir_perms search open};
+allow razerparts_app system_app_data_file:file { create rw_file_perms rename setattr unlink };
+
