@@ -37,4 +37,6 @@
     <string name="chroma_mode">Mode</string>
     <string name="chroma_color">Color</string>
     <string name="chroma_brightness">Brightness (5-255)</string>
+    <string name="chroma_kill_rgb_when_screen_lock">Save Battery</string>
+    <string name="chroma_kill_rgb_when_screen_lock_summary">Kill Chroma when the screen is lock</string>
 </resources>

@@ -56,7 +56,10 @@
             android:name=".ChromaActivity"
             android:label="@string/pref_chroma" />
 
-        <receiver android:name="com.razer.parts.BootReceiver"
+        <service
+            android:name=".HolderService" />
+
+        <receiver android:name=".BootReceiver"
             android:exported="true">
             <intent-filter android:priority="999">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

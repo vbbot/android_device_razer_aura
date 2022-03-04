@@ -17,41 +17,26 @@ package com.razer.parts;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.SystemProperties;
-import android.os.RemoteException;
 import android.provider.Settings;
-import android.view.IWindowManager;
-import android.view.WindowManagerGlobal;
+
 import static android.provider.Settings.System.MIN_REFRESH_RATE;
 import static android.provider.Settings.System.PEAK_REFRESH_RATE;
-
-import static com.razer.parts.Constants.*;
-import com.razer.parts.ShellUtils;
-import com.razer.parts.ShellUtils.CommandResult;
-import com.razer.parts.SharedPreferenceUtil;
-import com.razer.parts.ChromaManager;
-import com.razer.parts.R;
+import static com.razer.parts.Constants.CHROMA_SWITCH;
 
 public class BootReceiver extends BroadcastReceiver {
 
+    @SuppressWarnings("ConstantConditions")
     @Override
     public void onReceive(Context context, Intent intent) {
         if (context == null) {
             return;
         }
 
-        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
-        String mode = (String) spfu.get(context, CHROMA_MODE,
-                "color");
-        String color = (String) spfu.get(context, CHROMA_COLOR,
-                "#00FF00");
-        String brightness = (String) spfu.get(context, CHROMA_BRIGHTNESS,
-                "200");
-        boolean chromaEnabled = (boolean) spfu.get(context, CHROMA_SWITCH,
-                false);
+        SharedPreferenceUtil sharedPreferenceUtil = SharedPreferenceUtil.getInstance();
+        context.startService(new Intent(context, HolderService.class));
 
         /* Buggy */
-        // String resolution = (String) spfu.get(context, SCREEN_RESOLUTION,
+        // String resolution = (String) sharedPreferenceUtil.get(context, SCREEN_RESOLUTION,
         //         "1440");
         // if(resolution.equals("1440")) {
         //     ShellUtils.execCommand("wm density 480", false);
@@ -63,9 +48,10 @@ public class BootReceiver extends BroadcastReceiver {
 
         int refreshRate = Settings.System.getInt(context.getContentResolver(), PEAK_REFRESH_RATE, 120);
         Settings.System.putInt(context.getContentResolver(), MIN_REFRESH_RATE, refreshRate);
-	    Settings.System.putInt(context.getContentResolver(), PEAK_REFRESH_RATE, refreshRate);
+        Settings.System.putInt(context.getContentResolver(), PEAK_REFRESH_RATE, refreshRate);
 
-        if(chromaEnabled) {
+        boolean chromaEnabled = (boolean) sharedPreferenceUtil.get(context, CHROMA_SWITCH, false);
+        if (chromaEnabled) {
             ChromaManager tempManager = new ChromaManager();
             tempManager.systemReady();
             tempManager.loadMcuWithParams(context);

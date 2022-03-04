@@ -14,30 +14,18 @@
 
 package com.razer.parts;
 
-import android.app.AlertDialog;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemProperties;
-import android.provider.Settings;
-import android.telephony.TelephonyManager;
-import android.view.IWindowManager;
-import android.view.WindowManagerGlobal;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreference;
+
 import androidx.preference.EditTextPreference;
 import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragment;
+import androidx.preference.SwitchPreference;
 
-import static com.razer.parts.Constants.*;
-import com.razer.parts.ShellUtils;
-import com.razer.parts.ShellUtils.CommandResult;
-import com.razer.parts.SharedPreferenceUtil;
-import com.razer.parts.ChromaManager;
-import com.razer.parts.R;
+import static com.razer.parts.Constants.CHROMA_BRIGHTNESS;
+import static com.razer.parts.Constants.CHROMA_COLOR;
+import static com.razer.parts.Constants.CHROMA_MODE;
+import static com.razer.parts.Constants.CHROMA_SWITCH;
 
 public class ChromaFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
     private SwitchPreference mEnabledSwitch;
@@ -59,9 +47,9 @@ public class ChromaFragment extends PreferenceFragment implements Preference.OnP
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object o) {
-        if(preference.getKey().equals(CHROMA_SWITCH)) {
+        if (preference.getKey().equals(CHROMA_SWITCH)) {
             boolean enabled = (boolean) o;
-            if(enabled) {
+            if (enabled) {
                 mManager.systemReady();
                 mManager.loadMcuWithParams(preference.getContext());
             } else {
@@ -70,7 +58,7 @@ public class ChromaFragment extends PreferenceFragment implements Preference.OnP
             return true;
         }
         SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
-                    spfu.put(getContext(), preference.getKey(), (String) o);
+        spfu.put(getContext(), preference.getKey(), (String) o);
         updateSummary();
         mManager.loadMcuWithParams(preference.getContext());
         return true;

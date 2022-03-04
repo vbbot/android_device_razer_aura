@@ -23,6 +23,14 @@
             android:key="chroma_switch"
             android:title="@string/chroma_switch" />
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_baseline_battery_charging_full_24"
+            android:key="kill_rgb_when_lock_screen"
+            android:dependency="chroma_switch"
+            android:title="@string/chroma_kill_rgb_when_screen_lock"
+            android:summary="@string/chroma_kill_rgb_when_screen_lock_summary"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -14,25 +14,14 @@
 
 package com.razer.parts;
 
-import android.app.ActivityManager;
-import android.app.IActivityManager;
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Binder;
-import android.os.RemoteException;
-import android.os.ServiceManager;
-import android.os.UserHandle;
 import android.util.Log;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import static com.razer.parts.Constants.*;
-import com.razer.parts.ShellUtils;
-import com.razer.parts.ShellUtils.CommandResult;
-import com.razer.parts.SharedPreferenceUtil;
-import com.razer.parts.R;
 
 public class ChromaManager {
     private static final String BREATHING_START_1 = "03";
@@ -87,15 +76,15 @@ public class ChromaManager {
     }
 
     public void loadMcuWithParams(Context context) {
-        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
-        String mode = (String) spfu.get(context, Constants.CHROMA_MODE,
+        SharedPreferenceUtil sharedPreferenceUtil = SharedPreferenceUtil.getInstance();
+        String mode = (String) sharedPreferenceUtil.get(context, Constants.CHROMA_MODE,
                 "color");
-        String color = (String) spfu.get(context, Constants.CHROMA_COLOR,
+        String color = (String) sharedPreferenceUtil.get(context, Constants.CHROMA_COLOR,
                 "#00FF00");
-        String brightness = (String) spfu.get(context, Constants.CHROMA_BRIGHTNESS,
+        String brightness = (String) sharedPreferenceUtil.get(context, Constants.CHROMA_BRIGHTNESS,
                 "200");
 
-        switch(mode) {
+        switch (mode) {
             case "color":
                 runThsEffect(1, Color.parseColor(color));
                 break;

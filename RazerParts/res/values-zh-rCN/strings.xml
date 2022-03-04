@@ -24,4 +24,6 @@
     <string name="chroma_mode">模式</string>
     <string name="chroma_color">颜色</string>
     <string name="chroma_brightness">亮度 (5-255)</string>
+    <string name="chroma_kill_rgb_when_screen_lock">节能功能</string>
+    <string name="chroma_kill_rgb_when_screen_lock_summary">锁屏时关闭Chroma</string>
 </resources>

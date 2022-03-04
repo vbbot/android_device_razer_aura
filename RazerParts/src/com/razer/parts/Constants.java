@@ -25,8 +25,8 @@ public class Constants {
     public static final String ACTIVE_WAKE = "active_wakeup";
 
     public static final String CHROMA_SWITCH = "chroma_switch";
-
     public static final String CHROMA_MODE = "chroma_mode";
     public static final String CHROMA_COLOR = "chroma_color";
     public static final String CHROMA_BRIGHTNESS = "chroma_brightness";
+    public static final String CHROMA_KILL_RGB_WHEN_LOCK_SCREEN = "kill_rgb_when_lock_screen";
 }

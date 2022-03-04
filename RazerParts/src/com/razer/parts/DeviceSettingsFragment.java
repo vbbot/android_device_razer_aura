@@ -14,33 +14,21 @@
 
 package com.razer.parts;
 
-import android.app.AlertDialog;
-import android.content.ComponentName;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemProperties;
-import android.os.RemoteException;
 import android.provider.Settings;
-import android.telephony.TelephonyManager;
-import android.util.Log;
-import android.view.IWindowManager;
-import android.view.WindowManagerGlobal;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreference;
+
 import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragment;
+
 import static android.provider.Settings.System.MIN_REFRESH_RATE;
 import static android.provider.Settings.System.PEAK_REFRESH_RATE;
-
-import static com.razer.parts.Constants.*;
-import com.razer.parts.ShellUtils;
-import com.razer.parts.ShellUtils.CommandResult;
-import com.razer.parts.SharedPreferenceUtil;
-import com.razer.parts.ChromaManager;
-import com.razer.parts.R;
+import static com.razer.parts.Constants.ACTIVE_WAKE;
+import static com.razer.parts.Constants.CHROMA;
+import static com.razer.parts.Constants.DOLBY_ATMOS;
+import static com.razer.parts.Constants.SCREEN_REFRESH_RATE;
+import static com.razer.parts.Constants.SCREEN_RESOLUTION;
 
 public class DeviceSettingsFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
     private ListPreference mResolutionPref;
@@ -65,7 +53,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
         switch (preference.getKey()) {
             case SCREEN_RESOLUTION:
                 String resolution = (String) o;
-                if(o.equals("1440")) {
+                if (o.equals("1440")) {
                     ShellUtils.execCommand("wm density 480", false);
                     ShellUtils.execCommand("wm size 1440x2560", false);
                 } else {
@@ -76,11 +64,11 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
             case SCREEN_REFRESH_RATE:
                 int parseInt = Integer.parseInt((String) o);
                 Settings.System.putInt(getContext().getContentResolver(), MIN_REFRESH_RATE, parseInt);
-	            Settings.System.putInt(getContext().getContentResolver(), PEAK_REFRESH_RATE, parseInt);
+                Settings.System.putInt(getContext().getContentResolver(), PEAK_REFRESH_RATE, parseInt);
                 break;
         }
         SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
-                    spfu.put(getContext(), preference.getKey(), (String) o);
+        spfu.put(getContext(), preference.getKey(), (String) o);
         updateSummary();
         return true;
     }
@@ -92,12 +80,14 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
                 preference.getContext().startActivity(new Intent(getActivity(), ChromaActivity.class));
                 break;
             case DOLBY_ATMOS:
-
+                preference.getContext().startActivity(new Intent()
+                        .setClassName("com.dolby.daxappui",
+                                "com.dolby.daxappui.MainActivity"));
                 break;
             case ACTIVE_WAKE:
                 preference.getContext().startActivity(new Intent()
-                    .setClassName("org.lineageos.settings",
-                     "org.lineageos.settings.doze.DozeSettingsActivity"));
+                        .setClassName("org.lineageos.settings",
+                                "org.lineageos.settings.doze.DozeSettingsActivity"));
                 break;
         }
         return true;
@@ -125,20 +115,19 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     }
 
     private void updateResolutionSummary() {
-        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
-        String resolution = (String) spfu.get(getContext(), SCREEN_RESOLUTION,
+        SharedPreferenceUtil sharedPreferenceUtil = SharedPreferenceUtil.getInstance();
+        String resolution = (String) sharedPreferenceUtil.get(getContext(), SCREEN_RESOLUTION,
                 "1440");
-        String[] entryvalue = getContext().getResources().getStringArray(R.array.resolution_values);
+        String[] entryValue = getContext().getResources().getStringArray(R.array.resolution_values);
         String[] entry = getContext().getResources().getStringArray(R.array.resolution_entries);
-        for (int i = 0; i < entryvalue.length; i++) {
-            if (entryvalue[i].equals(resolution)) {
+        for (int i = 0; i < entryValue.length; i++) {
+            if (entryValue[i].equals(resolution)) {
                 mResolutionPref.setSummary(entry[i]);
             }
         }
     }
 
     private void updateRefreshRateSummary() {
-        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
         String refreshRate = Settings.System.getInt(getContext().getContentResolver(), PEAK_REFRESH_RATE, 120) + "";
         String[] entryvalue = getContext().getResources().getStringArray(R.array.refresh_rate_values);
         String[] entry = getContext().getResources().getStringArray(R.array.refresh_rate_entries);
