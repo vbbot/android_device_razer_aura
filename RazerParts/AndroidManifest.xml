@@ -25,7 +25,7 @@
     <application
         android:directBootAware="true"
         android:label="@string/app_name"
-        android:icon="@drawable/ic_adaptive_launcher"
+        android:icon="@drawable/cellphone_cog"
         android:theme="@style/DeviceSettingsTheme">
 
         <activity
