@@ -57,9 +57,15 @@ public class ChromaFragment extends PreferenceFragment implements Preference.OnP
             }
             return true;
         }
-        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance();
+
+        SharedPreferenceUtil spfu = SharedPreferenceUtil.getInstance(); 
+        boolean currentEnabled = (boolean) spfu.get(getContext(), CHROMA_SWITCH, false);
         spfu.put(getContext(), preference.getKey(), (String) o);
         updateSummary();
+
+        if(!currentEnabled)
+            return true;    // Do not override switch when it's disabled
+
         mManager.loadMcuWithParams(preference.getContext());
         return true;
     }
