@@ -28,14 +28,14 @@
     </string-array>
     <string-array name="chroma_mode_entries">
         <item>Color</item>
-        <item>Breath [Bug]</item>
+        <!-- <item>Breath [Bug]</item> -->
         <item>Spectrum</item>
         <item>Wave (LTR)</item>
         <item>Wave (RTL)</item>
     </string-array>
     <string-array name="chroma_mode_values">
         <item>color</item>
-        <item>breath</item>
+        <!-- <item>breath</item> -->
         <item>spectrum</item>
         <item>wave_ltr</item>
         <item>wave_rtl</item>

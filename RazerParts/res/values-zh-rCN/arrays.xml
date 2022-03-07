@@ -2,7 +2,7 @@
 <resources>
     <string-array name="chroma_mode_entries">
         <item>纯颜色</item>
-        <item>呼吸 [Bug]</item>
+        <!-- <item>呼吸 [Bug]</item> -->
         <item>变色</item>
         <item>波浪 (左到右)</item>
         <item>波浪 (右到左)</item>
