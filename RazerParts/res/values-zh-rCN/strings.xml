@@ -28,5 +28,5 @@
     <string name="chroma_kill_rgb_when_screen_lock_summary">锁屏时关闭Chroma</string>
 
     <string name="pref_version_indicator">版本</string>
-    <string name="pref_version_indicator_summary">Pixel Experience Android 12L - Razer Phone 2\n本系统为免费系统,如果您以任何付费方式获取此包证明您已上当受骗,请立即退款</string>
+    <string name="pref_version_indicator_summary">Pixel Experience Android 13 - Razer Phone 2\n本系统为免费系统,如果您以任何付费方式获取此包证明您已上当受骗,请立即退款</string>
 </resources>
