@@ -53,8 +53,15 @@
         </activity>
 
         <activity
+            android:exported="true"
             android:name=".ChromaActivity"
             android:label="@string/pref_chroma" />
+
+        <activity
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:name=".NoticeActivity"
+            android:label="@string/pref_first_ref" />
 
         <service
             android:name=".HolderService" />

@@ -14,10 +14,17 @@
 
 package com.razer.parts;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.provider.Settings;
+
+import java.util.Locale;
 
 import static android.provider.Settings.System.MIN_REFRESH_RATE;
 import static android.provider.Settings.System.PEAK_REFRESH_RATE;
@@ -55,6 +62,21 @@ public class BootReceiver extends BroadcastReceiver {
             ChromaManager tempManager = new ChromaManager();
             tempManager.systemReady();
             tempManager.loadMcuWithParams(context);
+        }
+
+        boolean first_ref_shown = (boolean) sharedPreferenceUtil.get(context, "first_ref_shown",
+                false);
+        
+        if(first_ref_shown) {
+            return;
+        }
+
+        Locale locale = Resources.getSystem().getConfiguration().getLocales().get(0);
+        String tag = locale.toLanguageTag();
+        if(tag.equals("zh-Hans-CN")) {
+            Intent intent1 = new Intent(context, NoticeActivity.class);
+            intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent1);
         }
     }
 }
