@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021, Alcatraz323 <alcatraz32323@gmail.com>
+ * Copyright (c) 2023, Alcatraz323 <alcatraz32323@gmail.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -41,6 +41,7 @@ public class BootReceiver extends BroadcastReceiver {
 
         SharedPreferenceUtil sharedPreferenceUtil = SharedPreferenceUtil.getInstance();
         context.startService(new Intent(context, HolderService.class));
+        context.startService(new Intent(context, BMSService.class));
 
         /* Buggy */
         // String resolution = (String) sharedPreferenceUtil.get(context, SCREEN_RESOLUTION,

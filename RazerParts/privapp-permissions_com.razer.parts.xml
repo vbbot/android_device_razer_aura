@@ -17,5 +17,6 @@
         <permission name="android.permission.RECEIVE_BOOT_COMPLETED" />
         <permission name="android.permission.WRITE_SETTINGS" />
         <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="android.permission.BATTERY_STATS" />
     </privapp-permissions>
 </permissions>

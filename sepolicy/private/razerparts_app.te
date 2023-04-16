@@ -1,4 +1,3 @@
-type razerparts_app, domain;
 typeattribute razerparts_app mlstrustedsubject;
 
 app_domain(razerparts_app)
@@ -19,6 +18,12 @@ allow razerparts_app surfaceflinger_service:service_manager find;
 allow razerparts_app game_service:service_manager find;
 allow razerparts_app textservices_service:service_manager find;
 allow razerparts_app netstats_service:service_manager find;
+allow razerparts_app voiceinteraction_service:service_manager find;
+allow razerparts_app batterystats_service:service_manager find;
+allow razerparts_app batteryproperties_service:service_manager find;
+
+# ro.input.resampling, viewroot.profile_rendering
+dontaudit razerparts_app default_prop:file read;
 
 allow razerparts_app system_app_data_file:dir { create rw_dir_perms search open setattr };
 allow razerparts_app system_app_data_file:file { create rw_file_perms rename setattr unlink };
