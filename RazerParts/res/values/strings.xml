@@ -43,6 +43,8 @@
     <string name="bms_limit_to_eighty" formatted="false">Limit to around 80%</string>
     <string name="bms_limit_to_eighty_summary" formatted="false">Suspend charging when the percent is around 80% to protect battery(Always connected mode will make this never happen)</string>
 
+    <string name="volume_panel_trigger_title">Volume Panel</string>
+
     <string name="chroma_category_control">Control</string>
     <string name="chroma_switch">Enabled</string>
     <string name="chroma_category_custom">Custom</string>

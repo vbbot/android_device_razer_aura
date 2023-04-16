@@ -42,6 +42,8 @@
     <string name="bms_limit_to_eighty" formatted="false">限制最高电量为80%左右</string>
     <string name="bms_limit_to_eighty_summary" formatted="false">电量在80%左右时停止充电以保护电池(持续模式优先)</string>
 
+    <string name="volume_panel_trigger_title">音量面板</string>
+
     <string name="chroma_category_control">控制</string>
     <string name="chroma_switch">启用</string>
     <string name="chroma_category_custom">自定义</string>
