@@ -65,6 +65,11 @@ public class BootReceiver extends BroadcastReceiver {
             tempManager.loadMcuWithParams(context);
         }
 
+        boolean stepChargingManualOverride = (boolean) sharedPreferenceUtil.get(context, "bms_step_charging_switch",
+                true);
+        ShellUtils.execCommand("echo " + (stepChargingManualOverride ? "1" : "0") + " > /sys/class/power_supply/battery/step_charging_enabled", false);
+        ShellUtils.execCommand("echo " + (stepChargingManualOverride ? "1" : "0") + " > /sys/class/power_supply/battery/sw_jeita_enabled", false);
+
         boolean first_ref_shown = (boolean) sharedPreferenceUtil.get(context, "first_ref_shown",
                 false);
         
