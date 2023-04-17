@@ -29,6 +29,13 @@
             android:key="cat_charge_limiter"
             android:title="@string/bms_category_charge_limiter">
 
+        <Preference
+            android:icon="@drawable/information_outline"
+            android:key="cat_charge_limiter_notice"
+            android:selectable="false"
+            android:summary="@string/bms_charge_limiter_description"
+            android:title="@string/bms_charge_limiter_notice" />
+
         <SwitchPreference
             android:icon="@drawable/ic_baseline_whatshot_24"
             android:key="bms_always_connected_mode"
