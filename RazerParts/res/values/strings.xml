@@ -18,7 +18,7 @@
     <string name="app_name">RazerParts</string>
 
     <string name="category_display">Display</string>
-    <string name="pref_resolution">Resolution (Reboot will solve any problem)</string>
+    <string name="pref_resolution">Resolution</string>
     <string name="pref_refresh_rate">Refresh Rate</string>
     <string name="pref_summary_place_holder"> </string>
 

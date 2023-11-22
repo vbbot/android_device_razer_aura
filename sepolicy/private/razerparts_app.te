@@ -1,3 +1,4 @@
+typeattribute razerparts_app coredomain;
 typeattribute razerparts_app mlstrustedsubject;
 
 app_domain(razerparts_app)
@@ -21,6 +22,7 @@ allow razerparts_app netstats_service:service_manager find;
 allow razerparts_app voiceinteraction_service:service_manager find;
 allow razerparts_app batterystats_service:service_manager find;
 allow razerparts_app batteryproperties_service:service_manager find;
+allow razerparts_app window_service:service_manager find;
 
 # ro.input.resampling, viewroot.profile_rendering
 dontaudit razerparts_app default_prop:file read;

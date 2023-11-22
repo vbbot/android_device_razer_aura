@@ -54,10 +54,10 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
             case SCREEN_RESOLUTION:
                 String resolution = (String) o;
                 if (o.equals("1440")) {
-                    ShellUtils.execCommand("wm density 480", false);
+                    ShellUtils.execCommand("wm density 560", false);
                     ShellUtils.execCommand("wm size 1440x2560", false);
                 } else {
-                    ShellUtils.execCommand("wm density 360", false);
+                    ShellUtils.execCommand("wm density 419", false);
                     ShellUtils.execCommand("wm size 1080x1920", false);
                 }
                 break;
