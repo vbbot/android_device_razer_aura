@@ -23,6 +23,7 @@ allow razerparts_app voiceinteraction_service:service_manager find;
 allow razerparts_app batterystats_service:service_manager find;
 allow razerparts_app batteryproperties_service:service_manager find;
 allow razerparts_app window_service:service_manager find;
+allow razerparts_app overlay_service:service_manager find;
 
 # ro.input.resampling, viewroot.profile_rendering
 dontaudit razerparts_app default_prop:file read;

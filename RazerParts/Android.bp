@@ -26,6 +26,7 @@ android_app {
     required: [
         "privapp-permissions_com.razer.parts",
         "config-com.razer.parts",
+        "DisableChargingRippleOverlay",
     ],
 }
 

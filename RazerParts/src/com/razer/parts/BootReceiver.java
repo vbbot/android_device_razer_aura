@@ -29,6 +29,7 @@ import java.util.Locale;
 import static android.provider.Settings.System.MIN_REFRESH_RATE;
 import static android.provider.Settings.System.PEAK_REFRESH_RATE;
 import static com.razer.parts.Constants.CHROMA_SWITCH;
+import static com.razer.parts.Constants.BMS_STEP_CHG_SWITCH;
 
 public class BootReceiver extends BroadcastReceiver {
 
@@ -54,7 +55,7 @@ public class BootReceiver extends BroadcastReceiver {
             tempManager.loadMcuWithParams(context);
         }
 
-        boolean stepChargingManualOverride = (boolean) sharedPreferenceUtil.get(context, "bms_step_charging_switch",
+        boolean stepChargingManualOverride = (boolean) sharedPreferenceUtil.get(context, BMS_STEP_CHG_SWITCH,
                 true);
         ShellUtils.execCommand("echo " + (stepChargingManualOverride ? "1" : "0") + " > /sys/class/power_supply/battery/step_charging_enabled", false);
         ShellUtils.execCommand("echo " + (stepChargingManualOverride ? "1" : "0") + " > /sys/class/power_supply/battery/sw_jeita_enabled", false);
