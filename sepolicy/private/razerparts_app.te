@@ -3,11 +3,7 @@ typeattribute razerparts_app mlstrustedsubject;
 
 app_domain(razerparts_app)
 
-# Access sysfs_led control(Chroma)
-allow razerparts_app sysfs_leds:dir search;
-allow razerparts_app sysfs_leds:file { getattr open read write };
 
-allow razerparts_app zygote:unix_stream_socket getopt;
 allow razerparts_app activity_service:service_manager find;
 allow razerparts_app activity_task_service:service_manager find;
 allow razerparts_app audio_service:service_manager find;

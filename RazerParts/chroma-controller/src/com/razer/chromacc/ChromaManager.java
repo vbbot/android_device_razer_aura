@@ -12,7 +12,7 @@
  * copies or substantial portions of the Software.
  */
 
-package com.razer.parts;
+package com.razer.chromacc;
 
 import android.content.Context;
 import android.graphics.Color;

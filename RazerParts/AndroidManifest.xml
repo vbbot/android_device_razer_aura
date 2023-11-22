@@ -59,11 +59,6 @@
 
         <activity
             android:exported="true"
-            android:name=".ChromaActivity"
-            android:label="@string/pref_chroma" />
-
-        <activity
-            android:exported="true"
             android:name=".BMSActivity"
             android:label="@string/pref_battery_summary">
             <intent-filter>
@@ -79,9 +74,6 @@
             android:excludeFromRecents="true"
             android:name=".NoticeActivity"
             android:label="@string/pref_first_ref" />
-
-        <service
-            android:name=".HolderService" />
 
         <service
             android:name=".BMSService" />

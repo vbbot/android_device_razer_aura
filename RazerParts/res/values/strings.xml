@@ -50,15 +50,6 @@
 
     <string name="volume_panel_trigger_title">Volume Panel</string>
 
-    <string name="chroma_category_control">Control</string>
-    <string name="chroma_switch">Enabled</string>
-    <string name="chroma_category_custom">Custom</string>
-    <string name="chroma_mode">Mode</string>
-    <string name="chroma_color">Color</string>
-    <string name="chroma_brightness">Brightness (5-255)</string>
-    <string name="chroma_kill_rgb_when_screen_lock">Save Battery</string>
-    <string name="chroma_kill_rgb_when_screen_lock_summary">Kill Chroma when the screen is lock</string>
-
     <string name="pref_version_indicator">Custom version</string>
     <string name="pref_version_indicator_summary">Pixel Experience Android 13 - Razer Phone 2\nFree system, no paid way to get this system.\nAny re-selling is prohibited.</string>
     <string name="pref_first_ref">First boot</string>

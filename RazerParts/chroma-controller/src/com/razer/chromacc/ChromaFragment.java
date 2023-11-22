@@ -12,7 +12,7 @@
  * copies or substantial portions of the Software.
  */
 
-package com.razer.parts;
+package com.razer.chromacc;
 
 import android.os.Bundle;
 
@@ -22,10 +22,10 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
-import static com.razer.parts.Constants.CHROMA_BRIGHTNESS;
-import static com.razer.parts.Constants.CHROMA_COLOR;
-import static com.razer.parts.Constants.CHROMA_MODE;
-import static com.razer.parts.Constants.CHROMA_SWITCH;
+import static com.razer.chromacc.Constants.CHROMA_BRIGHTNESS;
+import static com.razer.chromacc.Constants.CHROMA_COLOR;
+import static com.razer.chromacc.Constants.CHROMA_MODE;
+import static com.razer.chromacc.Constants.CHROMA_SWITCH;
 
 public class ChromaFragment extends PreferenceFragment implements Preference.OnPreferenceChangeListener {
     private SwitchPreference mEnabledSwitch;

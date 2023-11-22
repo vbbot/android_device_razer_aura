@@ -24,12 +24,6 @@ public class Constants {
     public static final String DOLBY_ATMOS = "dolby_atmos";
     public static final String ACTIVE_WAKE = "active_wakeup";
 
-    public static final String CHROMA_SWITCH = "chroma_switch";
-    public static final String CHROMA_MODE = "chroma_mode";
-    public static final String CHROMA_COLOR = "chroma_color";
-    public static final String CHROMA_BRIGHTNESS = "chroma_brightness";
-    public static final String CHROMA_KILL_RGB_WHEN_LOCK_SCREEN = "kill_rgb_when_lock_screen";
-
     public static final String BMS_STEP_CHG_SWITCH = "bms_step_charging_switch";
     public static final String BMS_ALWAYS_CONNECTED_MODE = "bms_always_connected_mode";
     public static final String BMS_LIMIT_TO_EIGHTY = "bms_limit_to_eighty";

@@ -12,14 +12,14 @@
  * copies or substantial portions of the Software.
  */
 
-package com.razer.parts;
+package com.razer.chromacc;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import static com.razer.parts.Constants.CHROMA_KILL_RGB_WHEN_LOCK_SCREEN;
-import static com.razer.parts.Constants.CHROMA_SWITCH;
+import static com.razer.chromacc.Constants.CHROMA_KILL_RGB_WHEN_LOCK_SCREEN;
+import static com.razer.chromacc.Constants.CHROMA_SWITCH;
 
 public class ScreenStateListener extends BroadcastReceiver {
     @SuppressWarnings("ConstantConditions")

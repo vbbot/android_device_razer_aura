@@ -77,7 +77,9 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     public boolean onPreferenceClick(Preference preference) {
         switch (preference.getKey()) {
             case CHROMA:
-                preference.getContext().startActivity(new Intent(getActivity(), ChromaActivity.class));
+                preference.getContext().startActivity(new Intent()
+                        .setClassName("com.razer.chromacc",
+                                "com.razer.chromacc.ChromaActivity"));
                 break;
             case DOLBY_ATMOS:
                 preference.getContext().startActivity(new Intent()

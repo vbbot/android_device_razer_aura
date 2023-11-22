@@ -5,12 +5,11 @@
 //
 
 android_app {
-    name: "RazerParts",
+    name: "ChromaController",
 
     srcs: ["src/**/*.java"],
     resource_dirs: ["res"],
     certificate: "platform",
-    init_rc: ["razerparts.rc"],
     platform_apis: true,
     privileged: true,
 
@@ -24,23 +23,21 @@ android_app {
     ],
 
     required: [
-        "privapp-permissions_com.razer.parts",
-        "config-com.razer.parts",
-        "DisableChargingRippleOverlay",
-        "ChromaController"
+        "privapp-permissions_com.razer.chromacc",
+        "config-com.razer.chromacc",
     ],
 }
 
 prebuilt_etc {
-    name: "privapp-permissions_com.razer.parts",
+    name: "privapp-permissions_com.razer.chromacc",
     sub_dir: "permissions",
-    src: "privapp-permissions_com.razer.parts.xml",
+    src: "privapp-permissions_com.razer.chromacc.xml",
     filename_from_src: true,
 }
 
 prebuilt_etc {
-    name: "config-com.razer.parts",
+    name: "config-com.razer.chromacc",
     sub_dir: "sysconfig",
-    src: "config-com.razer.parts.xml",
+    src: "config-com.razer.chromacc.xml",
     filename_from_src: true,
 }

@@ -28,7 +28,6 @@ import java.util.Locale;
 
 import static android.provider.Settings.System.MIN_REFRESH_RATE;
 import static android.provider.Settings.System.PEAK_REFRESH_RATE;
-import static com.razer.parts.Constants.CHROMA_SWITCH;
 import static com.razer.parts.Constants.BMS_STEP_CHG_SWITCH;
 
 public class BootReceiver extends BroadcastReceiver {
@@ -41,19 +40,11 @@ public class BootReceiver extends BroadcastReceiver {
         }
 
         SharedPreferenceUtil sharedPreferenceUtil = SharedPreferenceUtil.getInstance();
-        context.startService(new Intent(context, HolderService.class));
         context.startService(new Intent(context, BMSService.class));
 
         int refreshRate = Settings.System.getInt(context.getContentResolver(), PEAK_REFRESH_RATE, 120);
         Settings.System.putInt(context.getContentResolver(), MIN_REFRESH_RATE, refreshRate);
         Settings.System.putInt(context.getContentResolver(), PEAK_REFRESH_RATE, refreshRate);
-
-        boolean chromaEnabled = (boolean) sharedPreferenceUtil.get(context, CHROMA_SWITCH, false);
-        if (chromaEnabled) {
-            ChromaManager tempManager = new ChromaManager();
-            tempManager.systemReady();
-            tempManager.loadMcuWithParams(context);
-        }
 
         boolean stepChargingManualOverride = (boolean) sharedPreferenceUtil.get(context, BMS_STEP_CHG_SWITCH,
                 true);
