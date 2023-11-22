@@ -34,11 +34,12 @@
         android:theme="@style/DeviceSettingsTheme">
 
         <activity
-                android:name=".DeviceSettingsActivity"
-                android:label="@string/device_settings_title"
-                android:icon="@drawable/cellphone_cog"
-                android:exported="true"
-                android:launchMode="singleTask">
+            android:name=".DeviceSettingsActivity"
+            android:label="@string/device_settings_title"
+            android:icon="@drawable/cellphone_cog"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
@@ -60,6 +61,7 @@
         <activity
             android:exported="true"
             android:name=".BMSActivity"
+            android:excludeFromRecents="true"
             android:label="@string/pref_battery_summary">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
