@@ -68,6 +68,7 @@
         <Preference
             android:icon="@drawable/information_outline"
             android:key="pref_version_indicator"
+            android:selectable="false"
             android:summary="@string/pref_version_indicator_summary"
             android:title="@string/pref_version_indicator" />
 
