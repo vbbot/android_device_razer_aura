@@ -65,6 +65,12 @@
             android:summary="@string/pref_doze_summary"
             android:title="@string/pref_doze" />
 
+        <Preference
+            android:icon="@drawable/information_outline"
+            android:key="pref_version_indicator"
+            android:summary="@string/pref_version_indicator_summary"
+            android:title="@string/pref_version_indicator" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

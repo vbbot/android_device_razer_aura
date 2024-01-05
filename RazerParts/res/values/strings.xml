@@ -39,4 +39,7 @@
     <string name="chroma_brightness">Brightness (5-255)</string>
     <string name="chroma_kill_rgb_when_screen_lock">Save Battery</string>
     <string name="chroma_kill_rgb_when_screen_lock_summary">Kill Chroma when the screen is lock</string>
+
+    <string name="pref_version_indicator">Custom version</string>
+    <string name="pref_version_indicator_summary">Pixel Experience Android 12L - Razer Phone 2</string>
 </resources>
