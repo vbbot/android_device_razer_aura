@@ -187,7 +187,8 @@ PRODUCT_PACKAGES += \
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
-    AuraParts
+    AuraParts \
+    RazerParts 
 
 # Display
 PRODUCT_PACKAGES += \

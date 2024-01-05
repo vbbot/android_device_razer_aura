@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021, Alcatraz323 <alcatraz32323@gmail.com>
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  -->
+<resources>
+    <string name="device_settings_title">Razer Parts</string>
+    <string name="device_settings_summary">Device Extra Settings</string>
+
+    <string name="app_name">RazerParts</string>
+
+    <string name="category_display">Display</string>
+    <string name="pref_resolution">Resolution (Require reconfigure gesture)</string>
+    <string name="pref_refresh_rate">Refresh Rate [WIP]</string>
+    <string name="pref_summary_place_holder"> </string>
+
+    <string name="category_chroma">Chroma MCU</string>
+    <string name="pref_chroma">Chroma</string>
+    <string name="pref_chroma_summary">Led configurator</string>
+    <string name="category_others">Others</string>
+    <string name="pref_dolby_atmos">[WIP] Dolby Atmos™</string>
+    <string name="pref_dolby_atmos_summary">Audio effects</string>
+    <string name="pref_doze">Active wakeup</string>
+    <string name="pref_doze_summary">Doze settings</string>
+
+    <string name="chroma_category_control">Control</string>
+    <string name="chroma_switch">Enabled</string>
+    <string name="chroma_category_custom">Custom</string>
+    <string name="chroma_mode">Mode</string>
+    <string name="chroma_color">Color</string>
+    <string name="chroma_brightness">Brightness (5-255)</string>
+</resources>

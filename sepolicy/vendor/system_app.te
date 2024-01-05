@@ -1,0 +1,4 @@
+# system_app.te
+
+allow system_app sysfs_leds:dir { rw_dir_perms };
+allow system_app sysfs_leds:file { rw_file_perms };

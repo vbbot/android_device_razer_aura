@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="device_settings_title">Razer设置</string>
+    <string name="device_settings_summary">设备设置</string>
+
+    <string name="app_name">RazerParts</string>
+
+    <string name="category_display">显示</string>
+    <string name="pref_resolution">分辨率(需要重新切换手势)</string>
+    <string name="pref_refresh_rate">刷新率(还不行)</string>
+
+    <string name="category_chroma">Chroma MCU</string>
+    <string name="pref_chroma">Chroma</string>
+    <string name="pref_chroma_summary">Led设置</string>
+    <string name="category_others">其他</string>
+    <string name="pref_dolby_atmos">[WIP] Dolby Atmos™</string>
+    <string name="pref_dolby_atmos_summary">音效设置</string>
+    <string name="pref_doze">主动显示</string>
+    <string name="pref_doze_summary">休眠设置</string>
+
+    <string name="chroma_category_control">控制</string>
+    <string name="chroma_switch">启用</string>
+    <string name="chroma_category_custom">自定义</string>
+    <string name="chroma_mode">模式</string>
+    <string name="chroma_color">颜色</string>
+    <string name="chroma_brightness">亮度 (5-255)</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="resolution_entries">
+        <item>1080p</item>
+        <item>1440p</item>
+    </string-array>
+    <string-array name="resolution_values">
+        <item>1080</item>
+        <item>1440</item>
+    </string-array>
+    <string-array name="refresh_rate_entries">
+        <item>60Hz</item>
+        <item>90Hz</item>
+        <item>120Hz</item>
+    </string-array>
+    <string-array name="refresh_rate_values">
+        <item>60</item>
+        <item>90</item>
+        <item>120</item>
+    </string-array>
+    <string-array name="chroma_mode_entries">
+        <item>Color</item>
+        <item>Breath [Bug]</item>
+        <item>Spectrum</item>
+        <item>Wave (LTR)</item>
+        <item>Wave (RTL)</item>
+    </string-array>
+    <string-array name="chroma_mode_values">
+        <item>color</item>
+        <item>breath</item>
+        <item>spectrum</item>
+        <item>wave_ltr</item>
+        <item>wave_rtl</item>
+    </string-array>
+</resources>
