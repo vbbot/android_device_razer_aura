@@ -526,7 +526,7 @@ vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib64/libhexagon_nn_stub.so
 
 # NFC
-vendor/lib/libpn553_fw.so
+vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # OMX - from PNX - RKQ1.200906.002
 vendor/lib/libOmxAacDec.so|3d90cded7de2423503025d115e2788e0eff7390f
