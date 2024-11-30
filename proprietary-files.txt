@@ -49,23 +49,23 @@ vendor/firmware/tfa98xx.cnt
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
 
-# Bluetooth - from polaris V11.0.5.0.QDGMIXM
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|74b5d2e7867e34c0e358cf8d82f3bfea58e97c28|cd3021575a4546e9b78c0968cd1ba4e0ce73ef9d
+# Bluetooth - from SHIFT6MQ.SOS.5.0.G.20240820-RELEASE-OTA
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|5acf94f38e47c2ec43c95e132dfe7b5d71ec41c4|83a6ab350a25a92b57a8e17c6ffa66c93b188ce3
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib/btaudio_offload_if.so:vendor/lib/libbthost_if.so|622fc26c4802e179e84789c83334154fe1cd247f|b149e07dfae7d840439c73cfd85c4f2a8e8aa0dd
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|9eeea93297e772684ff04423d76cb7370ced30b0
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|6bd5b413ee816935904936b75795f263027bd0b6
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|854ab4b4a51b02084bede6eb7b6db3f8a4ce0a76
-vendor/lib/libbluetooth_audio_session_qti.so|8dc3b127a53015c36cb108d7f27deba7b26825b6
-vendor/lib/libbtnv.so|c20530560bc7d3b64215ef4f588c5924230efaac
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|2785e77499639b978dec65fbbb612048a0e5388d
-vendor/lib64/btaudio_offload_if.so:vendor/lib64/libbthost_if.so|36d90d3479517b3b334538be3305dc0e0f84f7ac|faefab8d65e0f8931c597d1f2ad717dab313394d
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|8e4d152aacd51ced20db62faf99c67fe7478128e
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|384b6ceca9703c6f2fee5edc21947fdd6fdcc8d1
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|5de18d2d6621a052e1524e7f1c916097762b624a
-vendor/lib64/libbluetooth_audio_session_qti.so|cf33442de02bf2fe3a715985ae3bf8246b3e13e6
-vendor/lib64/libbtnv.so|395aad107d06bbff6dd2277c627a961a58ea728e
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|1b8ea7096ded35acef0bbc1a25840c0b1c12be04
+vendor/lib/btaudio_offload_if.so:vendor/lib/libbthost_if.so|4b8af51822ea40ef3d85a4e52f1a03def093ab98|3014d3e350dc266476c7942d5c3a98fa815e7fcc
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|af79014394920f20f846d318a942cd1fad2113e0
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|d61917bfbbc2457bfd8ab5b1f48d5ea61b7e140c
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|98048c8e4167c398fc56aad455c2a975dff56a07
+vendor/lib/libbluetooth_audio_session_qti.so|aa2e6e3c234da2a76a023100f1742cad4048dacd
+vendor/lib/libbtnv.so|f3752ea03195c3ca3a407285674f7ba1feae6e34
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|536efcea8b87ac2186d15e7bb5f100d28bcb17ea
+vendor/lib64/btaudio_offload_if.so:vendor/lib64/libbthost_if.so|f9d7229e818a3044d56739d9d47462c4af726c02|88486894bbcc032782d9d6f5403d777df0e8dd13
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|0232c83c7261301e39afbffad6c8985876e16241
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|ebdfcc7064fc144acf6cba300486c6394af3d73b
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|5e06b7b33d084975d6326875268cb237ad6d8559
+vendor/lib64/libbluetooth_audio_session_qti.so|aacecc978ab7150870da3c606b0b7ae35fa8e170
+vendor/lib64/libbtnv.so|48c2a0cd2a0283ad67c6cceb2073185ba300946a
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d11a6abbaddbfee605c57a1a235c1da3011ee068
 
 # ANT+
 system/lib/com.qualcomm.qti.ant@1.0.so:system_ext/lib/com.qualcomm.qti.ant@1.0.so
@@ -243,11 +243,11 @@ vendor/lib64/vendor.qti.hardware.mwqemadapter@1.0.so|c041dbfc99643e791e52c4e7f3a
 vendor/lib64/vendor.qti.latency@2.0.so|82196d2863e012ad2b6e1b9af9d9ce7c611f64be
 vendor/lib64/vendor.qti.latency@2.1.so|d279c5e456bb3e546130df3cd6f398cea6b48eaf
 
-# Configstore - from polaris V11.0.5.0.QDGMIXM
-vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|cf3acfde26c991b4c301d7bab375deec2952cad5
+# Configstore - from SHIFT6MQ.SOS.5.0.G.20240820-RELEASE-OTA
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|53762150ee4adb0bbad7102c2e2c5aec14f266a6
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
-vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|1e990a2e8a67aa8a1223ea8879cb049e5819868d
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|c9459c96581b4da688cfd53dfefa702b984a425f
+vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|c4f97035b4d6ca50b7a4471c15ff3787be7c5085
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|5e732a1b324f5cfab439217e19b9dcd6663d6082
 
 # Display (HDR) - from PNX - RKQ1.200906.002
 vendor/lib/libhdr_tm.so|1e8a647523db0a09c9587a77f1f7b132a03c2354
@@ -542,11 +542,11 @@ vendor/lib64/libOmxQcelp13Dec.so|65952f3680f9865ea601de764037637d6ee8c990
 vendor/lib64/libOmxVpp.so|a87440c7838b6f03726d97a4a52b695bb4c6e8f8
 vendor/lib64/libOmxWmaDec.so|7b2a714a74fea03a403a7d0edef61db2f70d7d4e
 
-# Peripheral Manager - from polaris V12.0.3.0.QDGMIXM
-vendor/bin/pm-proxy|ee93ea32e23879e1bf213fb62253738d7559bb97
-vendor/bin/pm-service|5ce89fb681068616d4c797a25736706971ce4e59|05a141c27d74efc6d6bbd728785af37080648acc
-vendor/lib/libperipheral_client.so|7886baa3fb0f5d1bd7971d806a34118eae37af03
-vendor/lib64/libperipheral_client.so|9475db86b218e2fd3b788993ff42cb79b7197c21
+# Peripheral Manager - from SHIFT6MQ.SOS.5.0.G.20240820-RELEASE-OTA
+vendor/bin/pm-proxy|2e430fb93a642f14780e23c490be80fc2f4b7b3d
+vendor/bin/pm-service|8dbd2d6de0d563295c385215af6e861e036bc00d|c13df2ff8c0091d9769a5db71465fcb9d0141291
+vendor/lib/libperipheral_client.so|21c890003483321cfdd986f70f8fc7e5d0b2a29f
+vendor/lib64/libperipheral_client.so|1ec85a8bf2554155f1bb9eb2988e9e5832995fde
 
 # PD mapper
 vendor/bin/pd-mapper
