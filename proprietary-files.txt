@@ -59,6 +59,7 @@ vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|98048c8e4167c398fc56
 vendor/lib/libbluetooth_audio_session_qti.so|aa2e6e3c234da2a76a023100f1742cad4048dacd
 vendor/lib/libbtnv.so|f3752ea03195c3ca3a407285674f7ba1feae6e34
 vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|536efcea8b87ac2186d15e7bb5f100d28bcb17ea
+vendor/lib/vendor.qti.hardware.fm@1.0.so|adc8e469b9eb58cdbecec2f3b466010d1a801063
 vendor/lib64/btaudio_offload_if.so:vendor/lib64/libbthost_if.so|f9d7229e818a3044d56739d9d47462c4af726c02|88486894bbcc032782d9d6f5403d777df0e8dd13
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|0232c83c7261301e39afbffad6c8985876e16241
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|ebdfcc7064fc144acf6cba300486c6394af3d73b
@@ -66,6 +67,7 @@ vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|5e06b7b33d084975d6
 vendor/lib64/libbluetooth_audio_session_qti.so|aacecc978ab7150870da3c606b0b7ae35fa8e170
 vendor/lib64/libbtnv.so|48c2a0cd2a0283ad67c6cceb2073185ba300946a
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|d11a6abbaddbfee605c57a1a235c1da3011ee068
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|8bb6c293e00c49fc69378815b872b7ed0b67189b
 
 # ANT+
 system/lib/com.qualcomm.qti.ant@1.0.so:system_ext/lib/com.qualcomm.qti.ant@1.0.so
