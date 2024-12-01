@@ -133,7 +133,7 @@ function blob_fixup() {
             ;;
         vendor/lib/hw/audio.primary.sdm845.so)
             [ "$2" = "" ] && return 0
-            "${PATCHELF}" --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
+            grep -q libprocessgroup.so "${2}" || "${PATCHELF}" --add-needed "libprocessgroup.so" "${2}"
             "${PATCHELF}" --replace-needed "libtinycompress_vendor.so" "libtinycompress.so" "${2}"
             ;;
         vendor/lib*/libbthost_if.so)
