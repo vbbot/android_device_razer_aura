@@ -70,6 +70,14 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V3-cpp.so" "${2}"
             ;;
+        system_ext/lib/libwfdmmsrc_system.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+            ;;
+        system_ext/lib64/libwfdnative.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libinput_shim.so" "${2}" || "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
+            ;;
         system_ext/lib/com.qualcomm.qti.ant@1.0.so | \
             system_ext/lib64/com.qualcomm.qti.ant@1.0.so | \
             vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti | \
