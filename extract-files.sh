@@ -118,6 +118,11 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
+        vendor/bin/hw/android.hardware.drm@1.1-service.widevine)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libhidltransport.so" "libhidlbase.so" "${2}"
+            "${PATCHELF}" --remove-needed "libhwbinder.so" "${2}"
+            ;;
         vendor/lib/hw/audio.primary.sdm845.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
