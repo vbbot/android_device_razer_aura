@@ -70,7 +70,8 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V3-cpp.so" "${2}"
             ;;
-        system_ext/lib*/com.qualcomm.qti.ant@1.0.so | \
+        system_ext/lib/com.qualcomm.qti.ant@1.0.so | \
+            system_ext/lib64/com.qualcomm.qti.ant@1.0.so | \
             vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti | \
             vendor/bin/hw/vendor.qti.esepowermanager@1.0-service | \
             vendor/bin/hw/vendor.qti.hardware.factory@1.0-service | \
@@ -78,15 +79,42 @@ function blob_fixup() {
             vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service | \
             vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service | \
             vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti | \
-            vendor/lib*/libGPQTEEC_vendor.so | \
-            vendor/lib*/libQTEEConnector_vendor.so | \
-            vendor/lib*/libqti-iopd.so | \
-            vendor/lib*/libqti-iopd-client.so | \
-            vendor/lib*/libsecureui_svcsock.so | \
-            vendor/lib*/vendor.qti.hardware.iop@1.0.so | \
-            vendor/lib*/hw/vendor.qti.esepowermanager@1.0-impl.so | \
-            vendor/lib*/hw/vendor.qti.hardware.factory@1.0-impl.so | \
-            vendor/lib*/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so)
+            vendor/lib/com.qualcomm.qti.ant@1.0.so | \
+            vendor/lib/libGPQTEEC_vendor.so | \
+            vendor/lib/libQTEEConnector_vendor.so | \
+            vendor/lib/libqti-iopd.so | \
+            vendor/lib/libqti-iopd-client.so | \
+            vendor/lib/libsecureui_svcsock.so | \
+            vendor/lib/vendor.qti.esepowermanager@1.0.so | \
+            vendor/lib/vendor.qti.hardware.factory@1.0.so | \
+            vendor/lib/vendor.qti.hardware.iop@1.0.so | \
+            vendor/lib/vendor.qti.hardware.iop@2.0.so | \
+            vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so | \
+            vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so | \
+            vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so | \
+            vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so | \
+            vendor/lib/vendor.qti.hardware.tui_comm@1.0.so | \
+            vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so | \
+            vendor/lib/hw/vendor.qti.hardware.factory@1.0-impl.so | \
+            vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so | \
+            vendor/lib64/com.qualcomm.qti.ant@1.0.so | \
+            vendor/lib64/libGPQTEEC_vendor.so | \
+            vendor/lib64/libQTEEConnector_vendor.so | \
+            vendor/lib64/libqti-iopd.so | \
+            vendor/lib64/libqti-iopd-client.so | \
+            vendor/lib64/libsecureui_svcsock.so | \
+            vendor/lib64/vendor.qti.esepowermanager@1.0.so | \
+            vendor/lib64/vendor.qti.hardware.factory@1.0.so | \
+            vendor/lib64/vendor.qti.hardware.iop@1.0.so | \
+            vendor/lib64/vendor.qti.hardware.iop@2.0.so | \
+            vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so | \
+            vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so | \
+            vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so | \
+            vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so | \
+            vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so | \
+            vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so | \
+            vendor/lib64/hw/vendor.qti.hardware.factory@1.0-impl.so | \
+            vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
