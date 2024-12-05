@@ -433,7 +433,7 @@ vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
 vendor/lib64/libC2D2.so
-vendor/lib64/libCB.so;DISABLE_CHECKELF
+vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libc2d30_bltlib.so
