@@ -20,7 +20,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class DeviceSettingsActivity extends Activity {
+public class DeviceSettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle bundle) {

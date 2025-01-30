@@ -20,7 +20,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class NoticeActivity extends Activity {
+public class NoticeActivity extends AppCompatActivity {
     Boolean unlock = false;
     @Override
     protected void onCreate(Bundle bundle) {
