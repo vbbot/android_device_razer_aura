@@ -27,7 +27,7 @@ public class BMSActivity extends AppCompatActivity {
         super.onCreate(bundle);
 
         ActionBar actionBar = getSupportActionBar();
-        if actionBar != null {
+        if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 

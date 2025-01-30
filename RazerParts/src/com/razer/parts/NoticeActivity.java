@@ -27,7 +27,7 @@ public class NoticeActivity extends Activity {
         super.onCreate(bundle);
         setContentView(R.layout.activity_notice);
         ActionBar actionBar = getSupportActionBar();
-        if actionBar != null {
+        if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
