@@ -14,7 +14,8 @@
 
 package com.razer.parts;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -25,7 +26,10 @@ public class NoticeActivity extends Activity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_notice);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if actionBar != null {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         new Thread(() -> {
             try {

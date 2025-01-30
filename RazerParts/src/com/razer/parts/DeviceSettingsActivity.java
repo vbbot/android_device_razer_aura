@@ -14,7 +14,8 @@
 
 package com.razer.parts;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -25,7 +26,10 @@ public class DeviceSettingsActivity extends Activity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if actionBar != null {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         DeviceSettingsFragment deviceSettingsFragment;
