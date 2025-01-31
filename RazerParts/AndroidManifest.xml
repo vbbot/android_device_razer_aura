@@ -48,11 +48,8 @@
             <meta-data
                 android:name="com.android.settings.icon"
                 android:resource="@drawable/cellphone_cog"/>
-            <meta-data
-                android:name="com.android.settings.icon_tintable"
-                android:value="true" />
             <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.ia.homepage" />
+                       android:value="com.android.settings.category.ia.display" />
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/device_settings_summary" />
         </activity>
