@@ -37,7 +37,7 @@ public class ChromaFragment extends PreferenceFragment implements Preference.OnP
     private ChromaManager mManager;
 
     @Override
-    public void onCreatePreferences(Bundle bundle, String key) {
+    public void onCreate(Bundle bundle, String key) {
         addPreferencesFromResource(R.xml.chroma_settings);
         findPreferences();
         bindListeners();
@@ -71,10 +71,10 @@ public class ChromaFragment extends PreferenceFragment implements Preference.OnP
     }
 
     private void findPreferences() {
-        mEnabledSwitch = findPreference(CHROMA_SWITCH);
-        mModePref = findPreference(CHROMA_MODE);
-        mColorPref = findPreference(CHROMA_COLOR);
-        mBrightnessPref = findPreference(CHROMA_BRIGHTNESS);
+        mEnabledSwitch = (SwitchPreference) findPreference(CHROMA_SWITCH);
+        mModePref = (ListPreference) findPreference(CHROMA_MODE);
+        mColorPref = (EditTextPreference) findPreference(CHROMA_COLOR);
+        mBrightnessPref = (EditTextPreference) findPreference(CHROMA_BRIGHTNESS);
     }
 
     private void bindListeners() {

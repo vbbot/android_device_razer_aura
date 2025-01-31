@@ -41,7 +41,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     public String TAG = "RazerParts";
 
     @Override
-    public void onCreatePreferences(Bundle bundle, String key) {
+    public void onCreate(Bundle bundle, String key) {
         addPreferencesFromResource(R.xml.device_settings);
         findPreferences();
         bindListeners();
@@ -96,8 +96,8 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     }
 
     private void findPreferences() {
-        mResolutionPref = findPreference(SCREEN_RESOLUTION);
-        mRefreshRatePref = findPreference(SCREEN_REFRESH_RATE);
+        mResolutionPref = (ListPreference) findPreference(SCREEN_RESOLUTION);
+        mRefreshRatePref = (ListPreference) findPreference(SCREEN_REFRESH_RATE);
         mChromaPref = findPreference(CHROMA);
         mDolbyAtmosPref = findPreference(DOLBY_ATMOS);
         mActiveWakeupPref = findPreference(ACTIVE_WAKE);
