@@ -28,10 +28,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.CompoundButton;
 
-import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreferenceCompat;
+import android.preference.Preference;
+import android.preference.PreferenceCategory;
+import android.preference.PreferenceFragment;
+import android.preference.SwitchPreference;
 
 import com.android.settingslib.widget.MainSwitchPreference;
 
@@ -42,10 +42,10 @@ public class DozeSettingsFragment extends PreferenceFragment implements
 
     private MainSwitchPreference mSwitchBar;
 
-    private SwitchPreferenceCompat mWakeOnGesturePreference;
-    private SwitchPreferenceCompat mPickUpPreference;
-    private SwitchPreferenceCompat mHandwavePreference;
-    private SwitchPreferenceCompat mPocketPreference;
+    private SwitchPreference mWakeOnGesturePreference;
+    private SwitchPreference mPickUpPreference;
+    private SwitchPreference mHandwavePreference;
+    private SwitchPreference mPocketPreference;
 
     private Handler mHandler = new Handler();
 

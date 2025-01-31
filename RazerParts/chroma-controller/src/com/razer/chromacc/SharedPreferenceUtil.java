@@ -17,7 +17,7 @@ package com.razer.chromacc;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import androidx.annotation.Nullable;
+import android.annotation.Nullable;
 
 public final class SharedPreferenceUtil {
 

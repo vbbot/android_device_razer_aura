@@ -26,7 +26,7 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.util.Log;
 
-import androidx.preference.PreferenceManager;
+import android.preference.PreferenceManager;
 
 import static android.provider.Settings.Secure.DOZE_ENABLED;
 

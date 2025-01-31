@@ -16,11 +16,11 @@ package com.razer.chromacc;
 
 import android.os.Bundle;
 
-import androidx.preference.EditTextPreference;
-import androidx.preference.ListPreference;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceFragment;
-import androidx.preference.SwitchPreference;
+import android.preference.EditTextPreference;
+import android.preference.ListPreference;
+import android.preference.Preference;
+import android.preference.PreferenceFragment;
+import android.preference.SwitchPreference;
 
 import static com.razer.chromacc.Constants.CHROMA_BRIGHTNESS;
 import static com.razer.chromacc.Constants.CHROMA_COLOR;

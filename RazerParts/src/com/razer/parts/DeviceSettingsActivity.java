@@ -13,7 +13,6 @@
  */
 
 package com.razer.parts;
-
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -24,6 +23,9 @@ public class DeviceSettingsActivity extends Activity {
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         DeviceSettingsFragment deviceSettingsFragment;
         if (fragment == null) {

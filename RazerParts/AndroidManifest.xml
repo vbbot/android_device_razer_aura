@@ -56,25 +56,10 @@
 
         <activity
             android:exported="true"
-            android:name=".BMSActivity"
-            android:excludeFromRecents="true"
-            android:label="@string/pref_battery_summary">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-                <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-            </intent-filter>
-            <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.ia.battery" />
-        </activity>
-
-        <activity
-            android:exported="true"
             android:excludeFromRecents="true"
             android:name=".NoticeActivity"
             android:label="@string/pref_first_ref" />
 
-        <service
-            android:name=".BMSService" />
 
         <service
             android:enabled="true"

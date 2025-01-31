@@ -19,7 +19,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
-import androidx.annotation.Nullable;
+import android.annotation.Nullable;
 
 public class HolderService extends Service {
     @Nullable
