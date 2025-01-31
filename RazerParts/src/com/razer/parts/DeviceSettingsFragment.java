@@ -41,7 +41,7 @@ public class DeviceSettingsFragment extends PreferenceFragment implements Prefer
     public String TAG = "RazerParts";
 
     @Override
-    public void onCreate(Bundle bundle, String key) {
+    public void onCreate(Bundle bundle) {
         addPreferencesFromResource(R.xml.device_settings);
         findPreferences();
         bindListeners();
