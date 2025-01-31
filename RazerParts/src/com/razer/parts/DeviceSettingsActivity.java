@@ -23,8 +23,8 @@ public class DeviceSettingsActivity extends Activity {
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (getActionBar() != null) {
+            getActionBar().setDisplayHomeAsUpEnabled(true);
         }
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         DeviceSettingsFragment deviceSettingsFragment;
