@@ -14,23 +14,16 @@
 
 package com.razer.parts;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.ActionBar;
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class DeviceSettingsActivity extends AppCompatActivity {
+public class DeviceSettingsActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         DeviceSettingsFragment deviceSettingsFragment;
         if (fragment == null) {
