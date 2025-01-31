@@ -43,10 +43,6 @@ public class BootReceiver extends BroadcastReceiver {
         int refreshRate = Settings.System.getInt(context.getContentResolver(), PEAK_REFRESH_RATE, 120);
         Settings.System.putInt(context.getContentResolver(), MIN_REFRESH_RATE, refreshRate);
         Settings.System.putInt(context.getContentResolver(), PEAK_REFRESH_RATE, refreshRate);
-
-        ShellUtils.execCommand("echo " + (stepChargingManualOverride ? "1" : "0") + " > /sys/class/power_supply/battery/step_charging_enabled", false);
-        ShellUtils.execCommand("echo " + (stepChargingManualOverride ? "1" : "0") + " > /sys/class/power_supply/battery/sw_jeita_enabled", false);
-
         boolean first_ref_shown = (boolean) sharedPreferenceUtil.get(context, "first_ref_shown",
                 false);
         
