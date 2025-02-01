@@ -13,7 +13,7 @@
   -->
 <resources>
     <string name="device_settings_title">Razer Parts</string>
-    <string name="device_settings_summary">Device Extra Settings</string>
+    <string name="device_settings_summary">Razer-specific Settings Including Screen Resolution and Chroma</string>
 
     <string name="app_name">RazerParts</string>
 
@@ -38,8 +38,8 @@
     <string name="volume_panel_trigger_title">Volume Panel</string>
 
     <string name="pref_version_indicator">Custom version</string>
-    <string name="pref_version_indicator_summary">Pixel Experience Android 13 - Razer Phone 2\nFree system, no paid way to get this system.\nAny re-selling is prohibited.</string>
+    <string name="pref_version_indicator_summary">Ported from Pixel Experience for Lineage 22.1</string>
     <string name="pref_first_ref">First boot</string>
-    <string name="pref_first_ref_message">Pixel Experience Android 13 - Razer Phone 2\nFree system, no paid way to get this system.\nAny re-selling is prohibited.</string>
+    <string name="pref_first_ref_message">Ported from Pixel Experience for Lineage 22.1</string>
     <string name="pref_first_not_yet">Wait for 10s</string>
 </resources>
