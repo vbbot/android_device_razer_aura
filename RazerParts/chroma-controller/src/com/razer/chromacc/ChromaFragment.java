@@ -38,6 +38,7 @@ public class ChromaFragment extends PreferenceFragment implements Preference.OnP
 
     @Override
     public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
         addPreferencesFromResource(R.xml.chroma_settings);
         findPreferences();
         bindListeners();
