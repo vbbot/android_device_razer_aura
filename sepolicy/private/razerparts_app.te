@@ -27,3 +27,4 @@ dontaudit razerparts_app default_prop:file read;
 allow razerparts_app system_app_data_file:dir { create rw_dir_perms search open setattr };
 allow razerparts_app system_app_data_file:file { create rw_file_perms rename setattr unlink };
 
+allow razerparts_app sensitive_content_protection_service:service_manager find;

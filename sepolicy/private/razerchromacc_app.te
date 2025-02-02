@@ -27,3 +27,4 @@ dontaudit razerchromacc_app default_prop:file read;
 allow razerchromacc_app system_app_data_file:dir { create rw_dir_perms search open setattr };
 allow razerchromacc_app system_app_data_file:file { create rw_file_perms rename setattr unlink };
 
+allow razerchromacc_app sensitive_content_protection_service:service_manager find;
