@@ -28,3 +28,4 @@ allow razerparts_app system_app_data_file:dir { create rw_dir_perms search open 
 allow razerparts_app system_app_data_file:file { create rw_file_perms rename setattr unlink };
 
 allow razerparts_app sensitive_content_protection_service:service_manager find;
+allow razerparts_app legacy_permission_service:service_manager find;
