@@ -1,7 +1,7 @@
 # Proprietary files - from aura-user-9-P-SMR7-RC003-RZR-210107-3225-release-keys, unless pinned
 
+# Current blobs with ELF checks disabled:
 # (arm32 only) libEGL_adreno, libGLESv1_CM_adreno, libQTapGLES, libq3dtools_adreno, libq3dtools_esx, libCB, libgsl depend on intrinsic symbols which changed namespacs such as __aeabi_uldivmod, __aeabi_ldivmod, which are difficult to shim (TODO)
-# libOmxVideoDSMode, libOmxVpp depend on libOmxCore, which is a gnu makefile target
 # libcne, libwqe, lowi-server, imsdatadaemon depend on libwpa_client, which is a gnu makefile target
 
 # ACDB
@@ -526,8 +526,8 @@ vendor/lib64/libhexagon_nn_stub.so
 vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # OMX - from PNX - RKQ1.200906.002
-vendor/lib/libOmxVideoDSMode.so;DISABLE_CHECKELF|5862b9d707ca00cd87b70a7f581df49fa3304d2c
-vendor/lib/libOmxVpp.so;DISABLE_CHECKELF|7a9a96445b55f28013ea8f4ed767c7e245420c4f
+vendor/lib/libOmxVideoDSMode.so|5862b9d707ca00cd87b70a7f581df49fa3304d2c
+vendor/lib/libOmxVpp.so|7a9a96445b55f28013ea8f4ed767c7e245420c4f
 
 # Peripheral Manager - from SHIFT6MQ.SOS.5.0.G.20240820-RELEASE-OTA
 vendor/bin/pm-proxy|2e430fb93a642f14780e23c490be80fc2f4b7b3d
