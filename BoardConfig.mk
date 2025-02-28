@@ -161,3 +161,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 include vendor/razer/aura/BoardConfigVendor.mk
+
+# Enable Dolby Atmos HW effects
+AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := true
