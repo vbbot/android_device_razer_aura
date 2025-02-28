@@ -89,7 +89,9 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/lineage/config/device_framework_matrix.xml \
+    $(DEVICE_PATH)/dolby_compatability_framework_matrix.xml
+
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
@@ -161,3 +163,9 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 include vendor/razer/aura/BoardConfigVendor.mk
+
+# Enable Dolby Atmos HW effects
+AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := true
+
+# To allow Dolby ELF files to be copied to the product partition
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
