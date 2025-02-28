@@ -166,3 +166,6 @@ include vendor/razer/aura/BoardConfigVendor.mk
 
 # Enable Dolby Atmos HW effects
 AUDIO_FEATURE_ENABLED_HW_ACCELERATED_EFFECTS := true
+
+# To allow Dolby ELF files to be copied to the product partition
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
